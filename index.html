@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Cookie of Doom</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-mystic">
+  <div class="container">
+    <h1>🔮 Passive-Aggressive Fortune</h1>
+
+    <div id="cookie" onclick="handleClick()" ondblclick="handleDoubleClick()">
+      <div class="bite"></div>
+    </div>
+
+    <div id="fortune-box" class="fortune-box">Click the cookie if you're emotionally ready.</div>
+
+    <div id="stats">
+      <h3>📊 Roast Stats</h3>
+      <p>Total Fortunes: <span id="totalCount">0</span></p>
+      <ul id="categoryBreakdown"></ul>
+    </div>
+
+    <audio id="boom-sound" src="boom.mp3" preload="auto"></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

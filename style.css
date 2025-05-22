@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #2e1a47;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  max-width: 500px;
+}
+
+#cookie {
+  width: 120px;
+  height: 120px;
+  background: #f4a460;
+  border-radius: 50%;
+  position: relative;
+  margin: 20px auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#cookie:active {
+  transform: scale(0.95);
+}
+
+.bite {
+  width: 40px;
+  height: 40px;
+  background: #2e1a47;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.crack {
+  animation: shake 0.3s ease;
+}
+
+.explode {
+  animation: explode 0.5s ease forwards;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(3deg); }
+  50% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+  100% { transform: rotate(0); }
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    background-color: #f4a460;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+    background-color: red;
+  }
+}
+
+.fortune-box {
+  min-height: 80px;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+#stats {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+#stats h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #ffdd57;
+  text-shadow: 0 0 5px #000;
+}
+
+#stats p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #e0e0e0;
+}
+
+#categoryBreakdown {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  gap: 10px;
+}
+
+#categoryBreakdown li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: #ffffff;
+  min-width: 120px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+#categoryBreakdown li:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 221, 87, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

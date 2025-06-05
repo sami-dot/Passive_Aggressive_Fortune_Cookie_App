@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/sami-dot/Passive_Aggressive_Fortune_Cookie_App.git'
+                git branch: 'main', url: 'https://github.com/sami-dot/Passive_Aggressive_Fortune_Cookie_App.git'
+
             }
         }
 
